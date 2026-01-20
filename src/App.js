@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './App.css';
-import { Header } from './components/header.js';
+import {Header} from './components/header.js';
 import {Main} from './components/main.js';
 
 function App() {
@@ -11,6 +11,6 @@ function App() {
       <Main />
     </div>
   );
-}
+};
 
 export default App;
