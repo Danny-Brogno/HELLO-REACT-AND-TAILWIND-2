@@ -2,11 +2,19 @@ import React from 'react';
 
 export const SelectSection = () => {
   return (
-    <div>
+    <div className="flex justify-center mt-10 h-[5em]">
+      
+      <div className="flex flex-col justify-between mr-5">
+        <h3 className="cursor-pointer hover:text-blue-700 transition-all duration-300"> Select movies that have 8+ rating</h3>
+        <h3 className="cursor-pointer hover:text-blue-700 transition-all duration-300"> Select movies that have 7+ rating</h3>
+        <h3 className="cursor-pointer hover:text-blue-700 transition-all duration-300"> Select movies that have 6+ rating</h3>
+      </div>
+      
       <select
         name=""
         id=""
-        className="movie-sorting bg-purple-500 rounded p-4"
+        defaultValue=""
+        className="movie-sorting bg-purple-500 rounded p-4 h-full"
       >
         <option value="" disabled hidden>Select an option</option>
         <option value="">Sort by</option>
@@ -18,7 +26,7 @@ export const SelectSection = () => {
         name="sort"
         id="sort"
         defaultValue=""
-        className="option bg-lime-500 rounded p-4 mt-4"
+        className="option bg-lime-500 rounded p-4 ml-4 h-full"
       >
         <option value="" disabled hidden>Select an option</option>
         <option value="asc">Ascending</option>

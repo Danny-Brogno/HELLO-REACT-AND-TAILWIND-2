@@ -22,11 +22,12 @@ export const Main = () => {
       {movies.map((movie)=>(
           <Movie 
             key = {movie.id}
+            id={movie.id}
             movie = {movie}
             title = {movie.title.slice(0,34)}
             rating = {movie.vote_average.toFixed(1)}
-            description={movie.overview.slice(0,200)+"..."}
-            image = {movie.poster_path}
+            description={movie.overview.slice(0,120)+".."}
+            image={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
             releaseDate = {movie.release_date}
             originalLanguage = {movie.original_language}
           />
