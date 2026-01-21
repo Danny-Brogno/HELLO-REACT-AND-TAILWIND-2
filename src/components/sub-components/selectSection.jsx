@@ -1,32 +1,22 @@
 import React from 'react';
 
-export const SelectSection = ({ handleFilter, givingRating }) => {
+export const SelectSection = ({ handleFilter, givingRating, ratings }) => {
   return(
     
     <div className="flex justify-center mt-10 h-[5em]">
 
       <div className="flex flex-col justify-between mr-5">
-
-        <h3 
-          className={givingRating === 8 ? 'h3-element active cursor-pointer' : 'h3-element cursor-pointer hover:text-blue-700 transition-all duration-300'}
-          onClick={() => handleFilter(8)}
+      {
+        ratings.map(rateGiven=>
+          <h3 
+            key={rateGiven}
+            className={givingRating === rateGiven ? 'h3-element active cursor-pointer' : 'h3-element cursor-pointer hover:text-blue-700 transition-all duration-300'}
+            onClick={() => handleFilter(rateGiven)}
           > 
-          Select movies that have 8+ rating
-        </h3>
-        
-        <h3 
-          className={givingRating === 7 ? 'h3-element active cursor-pointer' : 'h3-element cursor-pointer hover:text-blue-700 transition-all duration-300'}
-          onClick={() => handleFilter(7)}
-          > 
-          Select movies that have 7+ rating
-        </h3>
-        
-        <h3 
-          className={givingRating === 6 ? 'h3-element active cursor-pointer' : 'h3-element cursor-pointer hover:text-blue-700 transition-all duration-300'}
-          onClick={() => handleFilter(6)}
-          > 
-          Select movies that have 6+ rating
-        </h3>
+            Select movie rating: {rateGiven} or more
+          </h3>
+        )
+      }
         
       </div>
       

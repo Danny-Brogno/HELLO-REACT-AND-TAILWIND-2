@@ -25,7 +25,7 @@ export const Main = () => {
   
   // FILTER "CALL"
   const handleFilter = (rating)=> {
-    if (rating == givingRating) {
+    if (rating === givingRating) {
       setRating(0);
       setMovies(allMoviesFiltered);
     } else {
@@ -37,7 +37,11 @@ export const Main = () => {
   
   return (
     <main className="main">
-      <SelectSection handleFilter={handleFilter} givingRating={givingRating}/>
+      <SelectSection 
+        handleFilter={handleFilter} 
+        givingRating={givingRating}
+        ratings={[8,7,6]}
+      />
       <div className="flex flex-row items-center justify-around flex-wrap mt-4 px-10">
         
         {
