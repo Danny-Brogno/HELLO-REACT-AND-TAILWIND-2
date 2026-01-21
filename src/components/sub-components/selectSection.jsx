@@ -8,20 +8,21 @@ export const SelectSection = () => {
         id=""
         className="movie-sorting bg-purple-500 rounded p-4"
       >
-        <option value="" disabled selected hidden>Select an option</option>
+        <option value="" disabled hidden>Select an option</option>
         <option value="">Sort by</option>
         <option value="">Date</option>
         <option value="">Rating</option>
       </select>
       
       <select
-        name=""
-        id=""
+        name="sort"
+        id="sort"
+        defaultValue=""
         className="option bg-lime-500 rounded p-4 mt-4"
       >
-        <option value="" disabled selected hidden>Select an option</option>
-        <option value="">Ascending</option>
-        <option value="">Descending</option>
+        <option value="" disabled hidden>Select an option</option>
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
       </select>
       
     </div>
