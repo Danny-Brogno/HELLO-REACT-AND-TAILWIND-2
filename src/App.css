@@ -80,4 +80,6 @@ body {
   color: white;
 }
 
-
+.h3-element.active {
+  border-bottom: 1px solid lime;
+}
